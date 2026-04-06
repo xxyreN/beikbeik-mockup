@@ -693,18 +693,24 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: 14px;
 }
 
+/* Two-column carta layout */
+.carta-grid {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-3);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
 .carta-section {
-  padding: var(--space-6) var(--space-3);
-}
-.carta-section:nth-child(odd) {
+  padding: var(--space-3);
   background: var(--white);
-}
-.carta-section:nth-child(even) {
-  background: var(--cream-light);
+  border-radius: var(--radius);
+  border: 1px solid rgba(42,42,42,0.06);
 }
 .carta-inner {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: none;
 }
 
 .carta-section-title {
@@ -813,9 +819,32 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   line-height: 1.4;
 }
 
+/* Carta CTA on homepage */
+.carta-cta-wrap {
+  text-align: center;
+  margin-top: var(--space-5);
+}
+.carta-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  background: var(--copper);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 14px 32px;
+  border-radius: 30px;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+}
+.carta-cta-btn:hover {
+  background: var(--copper-light);
+  transform: translateY(-1px);
+}
+
 /* --- Allergen note --- */
 .carta-allergen {
-  max-width: 900px;
+  max-width: var(--max-w);
   margin: 0 auto;
   padding: var(--space-4) var(--space-3);
   text-align: center;
@@ -993,6 +1022,10 @@ html.lang-en [data-es] { display: none !important; }
 
   .hero { height: 70vh; min-height: 400px; }
   .hero h1 { font-size: 32px; }
+
+  .carta-grid {
+    grid-template-columns: 1fr;
+  }
 
   .sig-grid {
     grid-template-columns: 1fr;
