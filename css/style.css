@@ -50,7 +50,6 @@ body.fonts-loaded { opacity: 1; }
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
